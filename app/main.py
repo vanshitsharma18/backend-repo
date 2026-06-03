@@ -78,12 +78,15 @@ def create_app() -> FastAPI:
     # Middleware
     # -----------------------------------------------------------------------
     app.add_middleware(
-        CORSMiddleware,
-        allow_origins=["*"] if settings.is_development else [],
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://your-frontend-url.run.app"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
     # -----------------------------------------------------------------------
     # Exception handlers
