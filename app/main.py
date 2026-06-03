@@ -16,6 +16,7 @@ import sys
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
 
+import app
 from fastapi import FastAPI, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -77,11 +78,13 @@ def create_app() -> FastAPI:
     # -----------------------------------------------------------------------
     # Middleware
     # -----------------------------------------------------------------------
+    from fastapi.middleware.cors import CORSMiddleware
+
     app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://your-frontend-url.run.app"
+        "https://incident-frontend-267211801787.asia-south1.run.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
