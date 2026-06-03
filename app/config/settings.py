@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     # -------------------------------------------------------------------
     # Google Cloud
     # -------------------------------------------------------------------
-    project_id: str = "your-gcp-project-id"
+    project_id: str = "devops-lab-498208"
     firestore_collection: str = "incidents"
 
     # -------------------------------------------------------------------
