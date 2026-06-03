@@ -21,7 +21,10 @@ from app.services.firestore_service import FirestoreService, get_firestore_servi
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/incidents", tags=["Incidents"])
+router = APIRouter(
+    prefix="/api/incidents",
+    tags=["Incidents"]
+)
 
 
 @router.post(
